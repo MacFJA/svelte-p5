@@ -1,0 +1,42 @@
+{
+  "name": "@macfja/svelte-p5",
+  "version": "1.0.0",
+  "description": "Small wrapper around P5 for Svelte",
+  "svelte": "src/index.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "rollup": "^2.0.0",
+    "rollup-plugin-svelte": "^6.0.0",
+    "svelte": "^3.0.0"
+  },
+  "keywords": [
+    "svelte",
+    "sveltejs",
+    "p5",
+    "p5js",
+    "processing"
+  ],
+  "author": "MacFJA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/macfja/svelte-p5/issues"
+  },
+  "homepage": "https://github.com/macfja/svelte-p5#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macfja/svelte-p5.git"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "peerDependencies": {
+    "p5": "^1.1.9"
+  }
+}
