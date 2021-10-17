@@ -10,8 +10,8 @@ const name = pkg.name
 export default {
 	input: 'src/index.js',
 	output: [
-		{ file: pkg.module, 'format': 'es', inlineDynamicImports: true },
-		{ file: pkg.main, 'format': 'umd', name, inlineDynamicImports: true }
+		{ dir: 'dist', 'format': 'es', entryFileNames: pkg.module.replace('dist/', '') },
+		{ dir: 'dist', 'format': 'amd', name, entryFileNames: pkg.main.replace('dist/', '') }
 	],
 	plugins: [
 		svelte(),

@@ -1,6 +1,6 @@
 {
   "name": "@macfja/svelte-p5",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Small wrapper around P5 for Svelte",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
