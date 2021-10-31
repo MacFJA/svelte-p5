@@ -6,6 +6,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.3]
+
+### Changed
+
+- Use imported version of P5 from Promise or from `window`
+
+### Added
+
+- (dev) Add Prettier
+
+## [1.1.2]
+
+### Changed
+
+- Use imported version of P5 from `window`
+
+## [1.1.1]
+
+_The tag contains lots of errors, it should be avoided_
+
+## [1.1.0]
+
+### Changed
+
+- Dynamically import `p5*js`
+
+### Fixed
+
+- Add protection if the context is not loaded
+
 ## [1.0.0] - 2020-10-24
 
 First version
