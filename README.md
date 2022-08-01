@@ -10,15 +10,21 @@ npm install @macfja/svelte-p5
 
 ## Usage & Examples
 
+The component (`<P5 />`) execute every functions that are pass as a p5*js function.
+Every function have access to 3 parameters:
+- 1st parameter: The current sketch context (`createVector`, `circle`, `fill`, etc.)
+- 2nd parameter: The map of p5*js classes (`Color`, `Geometry`, `Shader`, etc.)
+- 3rd parameter: The map of p5*js constants (`BURN`, `DEG_TO_RAD`, `PI`, `RIGHT_ARROW`, etc.)
+
 ```html
 <script>
 import P5 from "@macfja/svelte-p5"
 
-function setup(p5) {
+function setup(p5, classes, constants) {
   p5.createCanvas(400, 400);
 }
 
-function draw(p5) {
+function draw(p5, classes, constants) {
   p5.background(220);
   p5.ellipse(50,50,80,80);
 }
@@ -65,14 +71,14 @@ let sketch = {
     p5.stroke(255); // Set line drawing color to white
   },
   draw: (p5) => {
-		p5.frameRate(speed);
+    p5.frameRate(speed);
     p5.background(0); // Set the background to black
     y = y - 1;
     if (y < 0) {
       y = p5.height;
     }
     p5.line(0, y, p5.width, y);
-		current = p5.frameRate()
+    current = p5.frameRate()
   }
 }
 </script>

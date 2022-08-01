@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Inject list of p5*js classes and constants in functions ([Issue#1])
+
 ## [1.1.3]
 
 ### Changed
@@ -24,7 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.1]
 
-_The tag contains lots of errors, it should be avoided_
+**_The tag contains lots of errors, it should be avoided_**
 
 ## [1.1.0]
 
@@ -40,5 +44,11 @@ _The tag contains lots of errors, it should be avoided_
 
 First version
 
-[Unreleased]: https://github.com/MacFJA/svelte-p5/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/MacFJA/svelte-p5/compare/1.1.3...HEAD
+[1.1.3]: https://github.com/MacFJA/svelte-p5/releases/tag/1.1.3
+[1.1.2]: https://github.com/MacFJA/svelte-p5/releases/tag/1.1.2
+[1.1.1]: https://github.com/MacFJA/svelte-p5/releases/tag/1.1.1
+[1.1.0]: https://github.com/MacFJA/svelte-p5/releases/tag/1.1.0
 [1.0.0]: https://github.com/MacFJA/svelte-p5/releases/tag/1.0.0
+
+[Issue#1]: https://github.com/MacFJA/svelte-p5/issues/1

@@ -15,10 +15,20 @@
                 throw new Error("Unable to find P5*js constructor")
             }
 
+            const classes = Object.fromEntries(
+                Object.entries(p5Constructor).filter(
+                    ([key, value]) => /^[A-Z]/.test(key) && typeof value === "function"
+                )
+            )
+
+            const constants = Object.fromEntries(
+                Object.entries(p5Constructor.prototype).filter(([key, value]) => /^[A-Z][A-Z_]+$/.test(key))
+            )
+
             context = new p5Constructor(p5js => {
                 let keys = Object.keys($$props)
                 keys.forEach(key => {
-                    p5js[key] = () => $$props[key](p5js)
+                    p5js[key] = () => $$props[key](p5js, classes, constants)
                 })
             }, canvas)
         })
